@@ -112,7 +112,55 @@ ip a
 ---
 
 ## 3. Configure Ubuntu Server
-Initial setup: network, SSH, users, updates, etc.
+After successfully installing Ubuntu Server on VirtualBox, follow these steps to configure your server.
+
+
+# 3.1 Update and Upgrade the System
+
+Make sure your system is up to date:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+# 3.2 Check Network Connectivity
+
+Verify that your server is connected to the internet by pinging an external host
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+# 3.3 Set Hostname
+
+Set a custom hostname for your server
+
+
+```bash
+sudo hostnamectl set-hostname myserver
+```
+
+Verify the change
+
+```bash
+hostnamectl
+```
+
+# 3.4 Enable OpenSSH Server
+
+Install and enable the OpenSSH server to allow remote connections
+
+```bash
+sudo apt install openssh-server -y
+sudo systemctl enable ssh
+sudo systemctl start ssh
+```
+
+Check status
+
+```bash
+systemctl status ssh
+```
 
 ---
 
