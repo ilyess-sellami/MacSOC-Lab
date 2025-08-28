@@ -62,6 +62,14 @@ The lab helps me (and others) to practice **threat detection, incident response,
 ## 1. Install VirtualBox
 Step-by-step guide for installing **Oracle VirtualBox** on your host machine.
 
+1. Go to the official VirtualBox website: [https://www.virtualbox.org/](https://www.virtualbox.org/).
+2. Download the version for your operating system (Windows, macOS, Linux).
+3. Run the installer and follow the installation wizard.
+4. Once installation is complete, launch VirtualBox from your applications menu.
+
+![VirtualBox Website Screenshot](/images/virtualbox-website.png)
+
+
 ---
 
 ## 2. Download & Install Ubuntu Server
