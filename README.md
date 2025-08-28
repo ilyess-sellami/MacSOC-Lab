@@ -83,6 +83,32 @@ Ubuntu Server will act as the main system for our SOC lab (Wazuh, Elastic Stack,
 
 ![Ubuntu Server Download](/images/ubuntu-server-website.png)
 
+
+### 2.2 Create a New Virtual Machine
+1. Open **VirtualBox** → Click **New**.  
+2. Enter VM details:  
+   - Name: `Ubuntu-SOC`  
+   - Type: `Linux`  
+   - Version: `Ubuntu (64-bit)` 
+3. Choose the downloaded Ubuntu Server ISO.   
+4. Allocate **RAM**: 4GB minimum (8GB recommended)  
+5. Create a **Virtual Hard Disk**: 40GB minimum, VDI, dynamically allocated  
+
+#### Screenshot
+![Create VM](/images/virtualbox-create-vm.png)
+
+
+### 2.3 Configure Network
+1. Go to **Settings → Network**.  
+2. Configure adapters:  
+   - **Adapter 1** → `Bridged Adapter` (gets an IP from your local network)  
+   - **Adapter 2** → `Host-Only Adapter` (optional, for internal lab communication)  
+3. Boot the VM and check IP:  
+```bash
+ip a
+```
+
+
 ---
 
 ## 3. Configure Ubuntu Server
