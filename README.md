@@ -82,7 +82,6 @@ Ubuntu Server will act as the main system for our SOC lab (Wazuh, Elastic Stack,
 1. Go to the official Ubuntu Server download page: [Ubuntu Server Downloads](https://ubuntu.com/download/server).  
 2. Download the **24.04.3 LTS ISO** for your system.
 
-#### Screenshot
 ![Ubuntu Server Download](/images/ubuntu-server-website.png)
 
 ---
