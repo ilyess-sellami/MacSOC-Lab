@@ -76,7 +76,6 @@ Step-by-step guide for installing **Oracle VirtualBox** on your host machine.
 We will install **Ubuntu Server 24.04.3 LTS** inside VirtualBox.  
 Ubuntu Server will act as the main system for our SOC lab (Wazuh, Elastic Stack, TheHive, etc.).
 
----
 
 ### 2.1 Download Ubuntu Server ISO
 1. Go to the official Ubuntu Server download page: [Ubuntu Server Downloads](https://ubuntu.com/download/server).  
