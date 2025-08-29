@@ -94,7 +94,7 @@ Ubuntu Server will act as the main system for our SOC lab (Wazuh, Elastic Stack,
 4. Allocate **RAM**: 4GB minimum (8GB recommended)  
 5. Create a **Virtual Hard Disk**: 40GB minimum, VDI, dynamically allocated  
 
-#### Screenshot
+
 ![Create VM](/images/virtualbox-create-vm.png)
 
 
@@ -115,7 +115,7 @@ ip a
 After successfully installing Ubuntu Server on VirtualBox, follow these steps to configure your server.
 
 
-# 3.1 Update and Upgrade the System
+### 3.1 Update and Upgrade the System
 
 Make sure your system is up to date:
 
@@ -123,7 +123,7 @@ Make sure your system is up to date:
 sudo apt update && sudo apt upgrade -y
 ```
 
-# 3.2 Check Network Connectivity
+### 3.2 Check Network Connectivity
 
 Verify that your server is connected to the internet by pinging an external host
 
@@ -131,13 +131,13 @@ Verify that your server is connected to the internet by pinging an external host
 sudo apt update && sudo apt upgrade -y
 ```
 
-# 3.3 Set Hostname
+### 3.3 Set Hostname
 
 Set a custom hostname for your server
 
 
 ```bash
-sudo hostnamectl set-hostname myserver
+sudo hostnamectl set-hostname ubuntu-soc
 ```
 
 Verify the change
@@ -146,7 +146,7 @@ Verify the change
 hostnamectl
 ```
 
-# 3.4 Enable OpenSSH Server
+### 3.4 Enable OpenSSH Server
 
 Install and enable the OpenSSH server to allow remote connections
 
@@ -161,6 +161,7 @@ Check status
 ```bash
 systemctl status ssh
 ```
+
 
 ---
 
