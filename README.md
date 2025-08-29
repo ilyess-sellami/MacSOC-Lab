@@ -128,7 +128,7 @@ sudo apt update && sudo apt upgrade -y
 Verify that your server is connected to the internet by pinging an external host
 
 ```bash
-sudo apt update && sudo apt upgrade -y
+ping -c 4 google.com
 ```
 
 ### 3.3 Set Hostname
