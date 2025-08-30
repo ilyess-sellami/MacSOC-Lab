@@ -10,26 +10,24 @@ The lab helps me (and others) to practice **threat detection, incident response,
 
 ## 🛠️ Components
 - **SIEM & Monitoring**  
-  - [Wazuh](https://wazuh.com/) – Host-based intrusion detection and log analysis  
-  - [Elastic Stack](https://www.elastic.co/elastic-stack/) – Centralized log storage, search, and dashboards  
+  - [Wazuh](https://wazuh.com/) – Open-source SIEM (includes Wazuh Indexer, Wazuh Server, and Wazuh Dashboard)  
 
 - **Incident Response**  
   - [TheHive](https://thehive-project.org/) – Incident Response Platform (IRP)  
-  - [Cortex](https://www.cortex-cert.fr/) – Analyzer and responder engine integrated with TheHive  
 
 - **Threat Emulation**  
   - [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) – Adversary simulation framework (ATT&CK-based testing)  
 
 - **Lab Environment**  
-  - **Ubuntu Server** (Wazuh + Elastic + TheHive + Cortex)  
+  - **Ubuntu Server** (Wazuh + TheHive)  
   - **MacBook (Victim Machine)** – Target for Atomic Red Team simulation  
 
 ---
 
 ## 🎯 Objectives
 - Build a **realistic SOC environment** for hands-on practice  
-- Detect and analyze simulated attacks with **Wazuh + Elastic**  
-- Conduct incident response workflows with **TheHive & Cortex**  
+- Detect and analyze simulated attacks with **Wazuh**  
+- Conduct incident response workflows with **TheHive**  
 - Improve SOC skills: **log analysis, detection engineering, IR playbooks**  
 - Share knowledge with the community and future SOC analysts  
 
@@ -38,7 +36,7 @@ The lab helps me (and others) to practice **threat detection, incident response,
 ## 🏗️ Architecture
 - **Virtualization**: VirtualBox
 - **Server OS**: Ubuntu Server 24.04 LTS
-- **SIEM**: Wazuh + Elasticsearch + Kibana
+- **SIEM**: Wazuh
 - **IR Platform**: TheHive
 - **Threat Simulation**: Atomic Red Team
 - **Victim Machine**: macOS
@@ -49,7 +47,7 @@ The lab helps me (and others) to practice **threat detection, incident response,
 1. [Install VirtualBox](#1-install-virtualbox)
 2. [Download & Install Ubuntu Server](#2-download--install-ubuntu-server)
 3. [Configure Ubuntu Server](#3-configure-ubuntu-server)
-4. [Install Wazuh + Elastic Stack](#4-install-wazuh--elastic-stack)
+4. [Install Wazuh](#4-install-wazuh)
 5. [Install & Configure TheHive](#5-install--configure-thehive)
 6. [Set Up Atomic Red Team](#6-set-up-atomic-red-team)
 7. [Connect Victim Machine (macOS)](#7-connect-victim-machine-macos)
@@ -165,8 +163,56 @@ systemctl status ssh
 
 ---
 
-## 4. Install Wazuh + Elastic Stack
-Deployment of the SIEM platform.
+## 4. Install Wazuh (Indexer + Server + Dashboard)
+
+We install Wazuh using the **assisted installation script**, which sets up all three core components:
+
+. **Wazuh Indexer →** Stores security events
+. **Wazuh Server →** Processes and correlates logs from agents
+. **Wazuh Dashboard →** Web interface for visualization and management
+
+### 4.1 Download the installer
+
+```bash
+curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh
+chmod +x wazuh-install.sh
+```
+
+### 4.2 Run the installer
+
+To install all components in one server:
+
+```bash
+sudo bash wazuh-install.sh --generate-config-files
+sudo bash wazuh-install.sh --install-all
+```
+
+### 4.3 Extract credentials
+
+The installer generates a file with all passwords:
+
+```bash
+tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
+```
+
+Example admin credentials (from my setup):
+
+```bash
+Username: admin
+Password: u8Dl3+rXpQalQnarV288Jl5c6ZktC.?z
+```
+
+### 4.4 Access the dashboard
+
+. LAN: ```https://<server-ip>/```
+
+. Login with the admin credentials from the password file.
+
+. Browser will warn about self-signed SSL → accept to continue.
+
+📸 Screenshot of Wazuh dashboard running here
+
+![Wazuh Dashboard Screenshot](/images/wazuh-dashboard.png)
 
 ---
 
