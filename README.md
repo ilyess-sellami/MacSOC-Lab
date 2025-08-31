@@ -325,6 +325,8 @@ agent.name: "macbook-victim" AND rule.id: 5402
 
 ![Wazuh Privilege Escalation Alert](/images/wazuh-priv-esc-alert.png)
 
+![Wazuh Privilege Escalation Alert](/images/wazuh-priv-esc-alert-rule-details.png)
+
 ---
 
 ## 8. Future Improvements
