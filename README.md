@@ -222,12 +222,12 @@ Installation and integration with Wazuh/Elastic.
 
 ---
 
-## 6. Set Up Atomic Red Team
+## 6. Connect Victim Machine (macOS)
 Running threat simulations to test detections.
 
 ---
 
-## 7. Connect Victim Machine (macOS)
+## 7.  Set Up Atomic Red Team
 Configuration for the MacBook as a victim machine.
 
 ---
