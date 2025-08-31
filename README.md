@@ -286,8 +286,44 @@ pip3 install atomic-red-team
 ---
 
 ## 7. Testing & Simulating Attacks
-Perform simulations and validate detections.
+In this phase, we simulate real-world attacks on the victim machine (macOS) using ***Atomic Red Team*** and verify that Wazuh detects the malicious activity. This allows us to test the ***effectiveness of the Wazuh rules*** and the overall SOC setup.
 
+
+### 7.1 Run Atomic Red Team Tests
+To simulate attacks automatically using Atomic Red Team on the macOS victim machine:
+
+1. Navigate to the desired technique folder:
+```bash
+cd ~/atomics/T1055.012
+```
+
+2. List the available test files:
+```bash
+ls
+# Output: T1055.012.md  T1055.012.yaml  bin  src
+```
+
+3. Run the attack using the atomic-red-team CLI (this ensures the attack is executed automatically and safely according to the YAML definition):
+```bash
+atomic run T1055.012 --atomic-red-team-directory ~/atomics
+```
+
+### 7.2 Confirm Alerts in Wazuh Dashboard
+
+After running the Atomic Red Team test, you can verify that Wazuh has captured the activity:
+
+1. Open ***Wazuh Dashboard*** → go to ***Discover***.
+
+2. Select the ```wazuh-alerts-*``` index pattern.
+
+3. Use the following query to find sudo usage alerts:
+
+```bash
+agent.name: "macbook-victim" AND rule.id: 571
+```
+4. Adjust the time filter to the period when you executed the test.
+
+![Wazuh Privilege Escalation Alert](/images/wazuh-priv-esc-alert.png)
 
 ---
 
