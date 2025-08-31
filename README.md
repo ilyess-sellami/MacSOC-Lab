@@ -2,9 +2,9 @@
 
 ## 📌 Overview
 This project is a **Security Operations Center (SOC) Home Lab** designed to simulate real-world cybersecurity operations.  
-It integrates **SIEM, Threat Emulation, and Incident Response platforms** to detect, analyze, and respond to security events in a controlled environment.  
+It integrates **SIEM, Agents, and Threat Emulation tools** to detect and analyze security events in a controlled environment.  
 
-The lab helps me (and others) to practice **threat detection, incident response, and SOC workflows** with open-source tools.
+The lab helps me (and others) to practice **threat detection, log analysis, and SOC workflows** using open-source tools.
 
 ---
 
@@ -12,8 +12,8 @@ The lab helps me (and others) to practice **threat detection, incident response,
 - **SIEM & Monitoring**  
   - [Wazuh](https://wazuh.com/) – Open-source SIEM (includes Wazuh Indexer, Wazuh Server, and Wazuh Dashboard)  
 
-- **Incident Response**  
-  - [TheHive](https://thehive-project.org/) – Incident Response Platform (IRP)  
+- **Endpoint Agent**  
+  - [Wazuh Agent](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/index.html) – Installed on endpoints (e.g., macOS, Windows, Linux) to collect logs and forward them to the Wazuh server  
 
 - **Threat Emulation**  
   - [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) – Adversary simulation framework (ATT&CK-based testing)  
@@ -27,7 +27,6 @@ The lab helps me (and others) to practice **threat detection, incident response,
 ## 🎯 Objectives
 - Build a **realistic SOC environment** for hands-on practice  
 - Detect and analyze simulated attacks with **Wazuh**  
-- Conduct incident response workflows with **TheHive**  
 - Improve SOC skills: **log analysis, detection engineering, IR playbooks**  
 - Share knowledge with the community and future SOC analysts  
 
@@ -37,7 +36,7 @@ The lab helps me (and others) to practice **threat detection, incident response,
 - **Virtualization**: VirtualBox
 - **Server OS**: Ubuntu Server 24.04 LTS
 - **SIEM**: Wazuh
-- **IR Platform**: TheHive
+- **Agents**: Wazuh agents installed on victim machines to forward logs/events
 - **Threat Simulation**: Atomic Red Team
 - **Victim Machine**: macOS
 
@@ -47,13 +46,11 @@ The lab helps me (and others) to practice **threat detection, incident response,
 1. [Install VirtualBox](#1-install-virtualbox)
 2. [Download & Install Ubuntu Server](#2-download--install-ubuntu-server)
 3. [Configure Ubuntu Server](#3-configure-ubuntu-server)
-4. [Install Wazuh](#4-install-wazuh)
-5. [Install & Configure TheHive](#5-install--configure-thehive)
+4. [Install Wazuh (Indexer + Server + Dashboard)](#4-install-wazuh)
+5. [Connect Victim Machine (macOS)](#7-connect-victim-machine-macos)
 6. [Set Up Atomic Red Team](#6-set-up-atomic-red-team)
-7. [Connect Victim Machine (macOS)](#7-connect-victim-machine-macos)
-8. [Testing & Simulating Attacks](#8-testing--simulating-attacks)
-9. [Incident Response Workflow](#9-incident-response-workflow)
-10. [Future Improvements](#10-future-improvements)
+7. [Testing & Simulating Attacks](#8-testing--simulating-attacks)
+8. [Future Improvements](#10-future-improvements)
 
 ---
 
@@ -217,13 +214,20 @@ Password: u8Dl3+rXpQalQnarV288Jl5c6ZktC.?z
 
 ---
 
-## 5. Install & Configure TheHive
-Installation and integration with Wazuh/Elastic.
+## 5. Connect Victim Machine (macOS)
 
----
+In this step, we will connect the macOS victim machine to the Wazuh server. The process includes registering the agent in the dashboard, installing and configuring the agent on the Mac, and verifying that logs are successfully sent to the SIEM.
 
-## 6. Connect Victim Machine (macOS)
-Running threat simulations to test detections.
+### 5.1 Add Agent in Wazuh Dashboard
+1. Log in to the Wazuh Dashboard.
+2. Navigate to **Agents → Add Agent**.
+3. Select:
+    . **OS**: macOS
+    . **Name**: ```macbook-victim```
+    . **Server Address**: your wazuh server-ip
+4. Copy the generated installation command provided by Wazuh Dashboard.
+
+![Wazuh Add Agent](/images/wazuh-add-agent.png)
 
 ---
 
