@@ -319,7 +319,7 @@ After running the Atomic Red Team test, you can verify that Wazuh has captured t
 3. Use the following query to find sudo usage alerts:
 
 ```bash
-agent.name: "macbook-victim" AND rule.id: 5402
+rule.id: 5402
 ```
 4. Adjust the time filter to the period when you executed the test.
 
