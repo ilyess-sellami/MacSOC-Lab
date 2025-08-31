@@ -224,10 +224,27 @@ In this step, we will connect the macOS victim machine to the Wazuh server. The 
 3. Select:
     . **OS**: macOS
     . **Name**: ```macbook-victim```
-    . **Server Address**: your wazuh server-ip
+    . **Server Address**: your wazuh ```<server-ip>```
 4. Copy the generated installation command provided by Wazuh Dashboard.
 
 ![Wazuh Add Agent](/images/wazuh-add-agent.png)
+
+
+### 5.2 Install and Configure Wazuh Agent on macOS
+On the victim machine (macOS), run the following command in the terminal:
+
+```bash
+curl -so wazuh-agent.pkg https://packages.wazuh.com/4.x/macos/wazuh-agent-4.12.0-1.intel64.pkg \
+&& echo "WAZUH_MANAGER='<server-ip>' && WAZUH_AGENT_NAME='macbook-victim'" > /tmp/wazuh_envs \
+&& sudo installer -pkg ./wazuh-agent.pkg -target /
+```
+
+Start the Wazuh agent service
+
+```bash
+sudo /Library/Ossec/bin/wazuh-control start
+```
+
 
 ---
 
@@ -239,10 +256,6 @@ Configuration for the MacBook as a victim machine.
 ## 8. Testing & Simulating Attacks
 Perform simulations and validate detections.
 
----
-
-## 9. Incident Response Workflow
-Using TheHive to respond to alerts from Wazuh.
 
 ---
 
