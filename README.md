@@ -210,12 +210,12 @@ Password: u8Dl3+rXpQalQnarV288Jl5c6ZktC.?z
 
 . Browser will warn about self-signed SSL → accept to continue.
 
-📸 Screenshot of Wazuh dashboard running here
+📸 Screenshots of Wazuh login/dashboard running here
 
-![Wazuh Dashboard 1 Screenshot](/images/wazuh-dashboard-1.png)
+![Wazuh Login Screenshot](/images/wazuh-login.png)
 
 
-![Wazuh Dashboard 2 Screenshot](/images/wazuh-dashboard-2.png)
+![Wazuh Dashboard Screenshot](/images/wazuh-dashboard.png)
 
 
 ---
