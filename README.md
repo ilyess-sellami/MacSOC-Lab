@@ -257,16 +257,29 @@ sudo /Library/Ossec/bin/wazuh-control start
 
 ---
 
-## 7.  Set Up Atomic Red Team
-Configuration for the MacBook as a victim machine.
+## 6. Set Up Atomic Red Team
+Atomic Red Team is an ***open-source framework*** for simulating adversary techniques based on the MITRE ATT&CK framework. In this step, we will install it on the ***victim machine (macOS)*** and run simple simulations to generate logs that Wazuh can detect.
+
+### 6.1 Install Atomic Red Team
+
+1. Install prerequisites (Python & Homebrew) if not already installed:
+
+```bash
+# Install Homebrew (if not installed)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Python3
+brew install python
+```
+
 
 ---
 
-## 8. Testing & Simulating Attacks
+## 7. Testing & Simulating Attacks
 Perform simulations and validate detections.
 
 
 ---
 
-## 10. Future Improvements
+## 8. Future Improvements
 Ideas for scaling, adding tools (e.g., MISP, Cortex, Velociraptor).
