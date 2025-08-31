@@ -19,7 +19,7 @@ The lab helps me (and others) to practice **threat detection, log analysis, and 
   - [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) – Adversary simulation framework (ATT&CK-based testing)  
 
 - **Lab Environment**  
-  - **Ubuntu Server** (Wazuh + TheHive)  
+  - **Ubuntu Server** (Wazuh)  
   - **MacBook (Victim Machine)** – Target for Atomic Red Team simulation  
 
 ---
@@ -69,7 +69,7 @@ Step-by-step guide for installing **Oracle VirtualBox** on your host machine.
 
 ## 2. Download & Install Ubuntu Server
 We will install **Ubuntu Server 24.04.3 LTS** inside VirtualBox.  
-Ubuntu Server will act as the main system for our SOC lab (Wazuh, Elastic Stack, TheHive, etc.).
+Ubuntu Server will act as the main system for our SOC lab.
 
 
 ### 2.1 Download Ubuntu Server ISO
@@ -328,4 +328,11 @@ agent.name: "macbook-victim" AND rule.id: 571
 ---
 
 ## 8. Future Improvements
-Ideas for scaling, adding tools (e.g., MISP, Cortex, Velociraptor).
+
+This SOC Home Lab provides a solid foundation for hands-on practice. Future enhancements can improve attack coverage, detection capabilities, and incident response readiness:
+
+- **Expand Threat Coverage**: Add more Atomic Red Team techniques, custom Wazuh rules, and advanced attack scenarios.
+
+- **Centralized Logging & Monitoring**: Collect detailed system events, forward logs from multiple endpoints, and visualize them in Wazuh Dashboard.
+
+- **Automate Detection & Response**: Configure alerts via email/Slack/webhook, create automatic response scripts, and integrate simple incident response actions.
