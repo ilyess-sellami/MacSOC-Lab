@@ -1,4 +1,5 @@
-# SOC Home Lab Project
+# MacSOC-Lab
+
 
 ## 📌 Overview
 This project is a **Security Operations Center (SOC) Home Lab** designed to simulate real-world cybersecurity operations.  
