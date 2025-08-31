@@ -262,7 +262,7 @@ Atomic Red Team is an ***open-source framework*** for simulating adversary techn
 
 ### 6.1 Install Atomic Red Team
 
-1. Install prerequisites (Python & Homebrew) if not already installed:
+Install prerequisites (Python & Homebrew) if not already installed
 
 ```bash
 # Install Homebrew (if not installed)
@@ -270,6 +270,13 @@ Atomic Red Team is an ***open-source framework*** for simulating adversary techn
 
 # Install Python3
 brew install python
+```
+
+Clone the Atomic Red Team repository
+
+```bash
+git clone https://github.com/redcanaryco/atomic-red-team.git
+cd atomic-red-team
 ```
 
 
