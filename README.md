@@ -242,6 +242,18 @@ Start the Wazuh agent service
 sudo /Library/Ossec/bin/wazuh-control start
 ```
 
+### 5.3 Verify Agent Registration and Logs
+
+1. Go back to ***Wazuh Dashboard → Agents***.
+(You should see the new agent ```macbook-victim``` listed and connected.)
+
+![Wazuh succesfully Agent Add](/images/wazuh-succesfully-agent-add.png)
+
+2. Check logs in Wazuh Dashboard → Discover → Logs.
+(Confirm that events from the macOS victim machine are being ingested.)
+
+![Wazuh Macbook Logs](/images/wazuh-macbook-logs.png)
+
 
 ---
 
