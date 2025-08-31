@@ -62,7 +62,7 @@ Step-by-step guide for installing **Oracle VirtualBox** on your host machine.
 3. Run the installer and follow the installation wizard.
 4. Once installation is complete, launch VirtualBox from your applications menu.
 
-- ![VirtualBox Website Screenshot](/images/virtualbox-website.png) – VirtualBox official website for download
+![VirtualBox Website Screenshot](/images/virtualbox-website.png)
 
 
 ---
