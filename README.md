@@ -221,10 +221,7 @@ In this step, we will connect the macOS victim machine to the Wazuh server. The 
 ### 5.1 Add Agent in Wazuh Dashboard
 1. Log in to the Wazuh Dashboard.
 2. Navigate to **Agents → Add Agent**.
-3. Select:
-    . **OS**: macOS
-    . **Name**: ```macbook-victim```
-    . **Server Address**: your wazuh ```<server-ip>```
+3. Select: **OS**: macOS, **Name**: ```macbook-victim```, **Server Address**: your wazuh ```<server-ip>```
 4. Copy the generated installation command provided by Wazuh Dashboard.
 
 ![Wazuh Add Agent](/images/wazuh-add-agent.png)
