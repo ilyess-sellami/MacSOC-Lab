@@ -212,10 +212,10 @@ Password: u8Dl3+rXpQalQnarV288Jl5c6ZktC.?z
 
 📸 Screenshot of Wazuh dashboard running here
 
-![Wazuh Dashboard Screenshot](/images/wazuh-dashboard-1.png)
+![Wazuh Dashboard 1 Screenshot](/images/wazuh-dashboard-1.png)
 
 
-![Wazuh Dashboard Screenshot](/images/wazuh-dashboard-2.png)
+![Wazuh Dashboard 2 Screenshot](/images/wazuh-dashboard-2.png)
 
 
 ---
