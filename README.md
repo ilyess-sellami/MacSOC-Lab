@@ -1,6 +1,8 @@
 # MacSOC-Lab
 
+![MACSOC-Lab](/images/mac-soc-lab.png)
 
+---
 ## 📌 Overview
 This project is a **Security Operations Center (SOC) Home Lab** designed to simulate real-world cybersecurity operations.  
 It integrates **SIEM, Agents, and Threat Emulation tools** to detect and analyze security events in a controlled environment.  
