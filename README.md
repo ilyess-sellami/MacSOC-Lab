@@ -1,4 +1,8 @@
-# MacSOC-Lab - SOC SIEM & Threat Emulation for MacBook Victim Machine
+# MacSOC-Lab
+
+**SOC SIEM & Threat Emulation for MacBook Victim Machine**
+
+---
 
 ![MACSOC-Lab](/images/mac-soc-lab.png)
 
