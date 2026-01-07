@@ -1,6 +1,6 @@
 # MacSOC-Lab
 
-**SOC SIEM & Threat Emulation for MacBook Victim Machine**
+**SOC SIEM & Threat Emulation for MacOS**
 
 ---
 
