@@ -4,7 +4,7 @@
 
 ---
 
-![MACSOC-Lab](/images/mac-soc-lab.png)
+![MACSOC-Lab](/docs/mac-soc-lab.png)
 
 ---
 ## 📌 Overview
@@ -69,7 +69,7 @@ Step-by-step guide for installing **Oracle VirtualBox** on your host machine.
 3. Run the installer and follow the installation wizard.
 4. Once installation is complete, launch VirtualBox from your applications menu.
 
-![VirtualBox Website Screenshot](/images/virtualbox-website.png)
+![VirtualBox Website Screenshot](/docs/virtualbox-website.png)
 
 
 ---
@@ -83,7 +83,7 @@ Ubuntu Server will act as the main system for our SOC lab.
 1. Go to the official Ubuntu Server download page: [Ubuntu Server Downloads](https://ubuntu.com/download/server).  
 2. Download the **24.04.3 LTS ISO** for your system.
 
-![Ubuntu Server Download](/images/ubuntu-server-website.png)
+![Ubuntu Server Download](/docs/ubuntu-server-website.png)
 
 
 ### 2.2 Create a New Virtual Machine
@@ -97,7 +97,7 @@ Ubuntu Server will act as the main system for our SOC lab.
 5. Create a **Virtual Hard Disk**: 40GB minimum, VDI, dynamically allocated  
 
 
-![Create VM](/images/virtualbox-create-vm.png)
+![Create VM](/docs/virtualbox-create-vm.png)
 
 
 ### 2.3 Configure Network
@@ -216,7 +216,7 @@ Password: u8Dl3+rXpQalQnarV288Jl5c6ZktC.?z
 
 📸 Screenshot of Wazuh dashboard running here
 
-![Wazuh Dashboard Screenshot](/images/wazuh-dashboard.png)
+![Wazuh Dashboard Screenshot](/docs/wazuh-dashboard.png)
 
 
 ---
@@ -231,7 +231,7 @@ In this step, we will connect the macOS victim machine to the Wazuh server. The 
 3. Select: **OS**: ```macOS```, **Name**: ```macbook-victim```, **Server Address**: your wazuh ```<server-ip>```
 4. Copy the generated installation command provided by Wazuh Dashboard.
 
-![Wazuh Add Agent](/images/wazuh-add-agent.png)
+![Wazuh Add Agent](/docs/wazuh-add-agent.png)
 
 
 ### 5.2 Install and Configure Wazuh Agent on macOS
@@ -254,12 +254,12 @@ sudo /Library/Ossec/bin/wazuh-control start
 1. Go back to ***Wazuh Dashboard → Agents***.
 (You should see the new agent ```macbook-victim``` listed and connected.)
 
-![Wazuh succesfully Agent Add](/images/wazuh-succesfully-agent-add.png)
+![Wazuh succesfully Agent Add](/docs/wazuh-succesfully-agent-add.png)
 
 2. Check logs in Wazuh Dashboard → Discover → Logs.
 (Confirm that events from the macOS victim machine are being ingested.)
 
-![Wazuh Macbook Logs](/images/wazuh-macbook-logs.png)
+![Wazuh Macbook Logs](/docs/wazuh-macbook-logs.png)
 
 
 ---
@@ -330,9 +330,9 @@ rule.id: 5402
 ```
 4. Adjust the time filter to the period when you executed the test.
 
-![Wazuh Privilege Escalation Alert](/images/wazuh-priv-esc-alert.png)
+![Wazuh Privilege Escalation Alert](/docs/wazuh-priv-esc-alert.png)
 
-![Wazuh Privilege Escalation Alert](/images/wazuh-priv-esc-alert-rule-details.png)
+![Wazuh Privilege Escalation Alert](/docs/wazuh-priv-esc-alert-rule-details.png)
 
 ---
 
